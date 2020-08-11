@@ -31,6 +31,6 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        echo Top secret: $TOP_SECRET
+        echo "Top secret: $TOP_SECRET"
         FOOBAR=$TOP_SECRET
-        echo Foobar: $FOOBAR
+        echo "Foobar: $FOOBAR"
