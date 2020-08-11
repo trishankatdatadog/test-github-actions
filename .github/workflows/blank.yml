@@ -34,6 +34,6 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         echo "Top secret: $TOP_SECRET"
-        FOOBAR=$TOP_SECRET
-        echo "Foobar: $FOOBAR"
+        echo "Here it is character by character"
+        # https://stackoverflow.com/a/10572879
         echo $TOP_SECRET | sed -e 's/\(.\)/\1\n/g'
