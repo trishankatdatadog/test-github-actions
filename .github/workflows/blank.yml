@@ -41,3 +41,4 @@ jobs:
         # which is probably why it advises not using structured data as values of secrets:
         # https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#naming-your-secrets
         echo $TOP_SECRET | sed -e 's/\(.\)/\1\n/g'
+        echo "Top secret: 42"
