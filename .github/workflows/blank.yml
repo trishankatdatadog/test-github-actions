@@ -36,7 +36,4 @@ jobs:
         echo "Top secret: $TOP_SECRET"
         FOOBAR=$TOP_SECRET
         echo "Foobar: $FOOBAR"
-        tempfile=$(mktemp)
-        echo -n $TOP_SECRET > $tempfile
-        echo 123 >> $tempfile
-        cat $tempfile
+        echo $TOP_SECRET | sed -e 's/\(.\)/\1\n/g'
