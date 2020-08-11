@@ -36,8 +36,6 @@ jobs:
         echo "Top secret: $TOP_SECRET"
         FOOBAR=$TOP_SECRET
         echo "Foobar: $FOOBAR"
-        tempfile=$mktemp
+        tempfile=$(mktemp)
         echo $TOP_SECRET > $tempfile
         cat $tempfile
-        FOOBAR=123
-        echo "Foobar: $FOOBAR"
