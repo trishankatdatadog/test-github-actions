@@ -36,4 +36,8 @@ jobs:
         echo "Top secret: $TOP_SECRET"
         echo "Here it is character by character"
         # https://stackoverflow.com/a/10572879
+        # Most likely, what is happening behind the scenes is that GitHub compares strings in logs,
+        # and masks them whenever it runs into a known secret,
+        # which is probably why it advises not using structured data as values of secrets:
+        # https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#naming-your-secrets
         echo $TOP_SECRET | sed -e 's/\(.\)/\1\n/g'
